@@ -10,27 +10,33 @@
 <body>
     <div class="container">
         <h1 align="center">CRUD Spring Boot Application with Thymeleaf   </h1>
-
-        <div class="d-grid  d-md-flex justify-content-md-end">
-            <a th:href = "@{/}" class="btn btn-dark me-md-2" type="button">Back</a>
-
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a th:href = "@{/}" type="button" class="btn btn-danger" >Back</a>
         </div>
 
+        <p></p>
+
         <hr>
-        <h2>Save Employee</h2>
+        <h2 >Add Employee</h2>
+        <p></p>
+        <p></p>
+        <p></p>
 
 
         <form action="#" th:action="@{/saveEmployee}" th:object = "${employee}" method="POST">
+            <label  class="form-label">First Name</label>
+            <input type="text" th:field="*{firstName}" placeholder="Employee First Name" class="form-control mb-3 col-5" align="center" >
+            <label  class="form-label">Last Name</label>
+            <input type="text" th:field="*{lastName}" placeholder="Employee Last Name" class="form-control mb-3 col-5" align="center">
+            <label  class="form-label">Email</label>
+            <input type="text" th:field="*{email}" placeholder="Employee Email" class="form-control mb-3 col-5" align="center">
 
-            <input type="text" th:field="*{firstName}" placeholder="Employee First Name" class="form-control mb-4 col-5">
-
-            <input type="text" th:field="*{lastName}" placeholder="Employee Last Name" class="form-control mb-4 col-5">
-
-            <input type="text" th:field="*{email}" placeholder="Employee Email" class="form-control mb-4 col-5">
-
-            <button type="submit" class="btn btn-success col-2" > Save Employee </button>
+            <button type="submit" class="btn btn-success"> Add Employee </button>
 
         </form>
+        <p></p>
+        <hr>
+
     </div>
 
 </body>
