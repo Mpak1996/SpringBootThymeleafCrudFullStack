@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="ISO-8859-1">
     <title>CRUD Spring Boot Application with Thymeleaf</title>
@@ -10,20 +10,34 @@
 
 
 <div  class="container my-2">
-    <h1>Employees List</h1>
+    <h1 align="center"> CRUD Spring Boot Application with Thymeleaf </h1>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h2 align="center"> Employees List </h2>
+    <p></p>
+    <p></p>
+    <a th:href = "@{/showNewEmployeeForm}" type="button" class="btn btn-primary"> Add Employee</a>
+    <p></p>
+    <p></p>
     <table border="1" class = "table table-dark table-hover table-responsive-md">
         <thead>
             <tr>
                 <th>Employee First Name</th>
                 <th>Employee Last name</th>
                 <th>Employee Email</th>
+                <th> Actions </th>
             </tr>
         </thead>
         <tbody>
-            <tr th:each="employee : ${listEmployees}">
-                <td th:text="${employee.firstName}"></td>
-                <td th:text="${employee.lastName}"></td>
-                <td th:text="${employee.email}"></td>
+            <tr th:each = "employee : ${listEmployees}">
+                <td th:text = "${employee.firstName}"></td>
+                <td th:text = "${employee.lastName}"></td>
+                <td th:text = "${employee.email}"></td>
+                <td th:href = "@{/showFormUpdate/{id}(id=${employee.id})}" class="btn btn-success" > Update </td>
             </tr>
         </tbody>
     </table>
