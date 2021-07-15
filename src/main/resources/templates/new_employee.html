@@ -25,11 +25,11 @@
 
         <form action="#" th:action="@{/saveEmployee}" th:object = "${employee}" method="POST">
             <label  class="form-label">First Name</label>
-            <input type="text" th:field="*{firstName}" placeholder="Employee First Name" class="form-control mb-3 col-5" align="center" >
+            <input type="text" th:field="*{firstName}" placeholder="Employee First Name" class="form-control mb-2 col-5"  >
             <label  class="form-label">Last Name</label>
-            <input type="text" th:field="*{lastName}" placeholder="Employee Last Name" class="form-control mb-3 col-5" align="center">
+            <input type="text" th:field="*{lastName}" placeholder="Employee Last Name" class="form-control mb-2 col-5" >
             <label  class="form-label">Email</label>
-            <input type="text" th:field="*{email}" placeholder="Employee Email" class="form-control mb-3 col-5" align="center">
+            <input type="text" th:field="*{email}" placeholder="Employee Email" class="form-control mb-2 col-5" >
 
             <button type="submit" class="btn btn-success"> Add Employee </button>
 
